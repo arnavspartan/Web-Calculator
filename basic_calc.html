@@ -1,0 +1,87 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Enter first number:</td>
+        </tr>
+        <tr>
+            <input type="text" id="box_2" placeholder="Enter second number:">
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <button id="btn-1">+</button>
+                <button id="btn-2">+</button>
+                <button id="btn-3">+</button>
+                <button id="btn-4">+</button>
+            </td>
+        </tr>
+    </table>
+    
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <style>
+        .calculator {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            max-width: 400px;
+            margin: 50px auto;
+            gap: 10px;
+        }
+        .calculator input,
+        .calculator button {
+            color: white;
+            background-color: red;
+            font-size: 2rem;
+            padding: 20px;
+            text-align: center;
+        }
+        .calculator input {
+            grid-column: span 4;
+        }
+        .calculator button {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="calculator">
+    <input type="text" id="display" disabled>
+    <button onclick="clearDisplay()">C</button>
+    <button onclick="deleteLast()">DEL</button>
+    <button onclick="appendCharacter('/')">/</button>
+    <button onclick="appendCharacter('*')">*</button>
+    <button onclick="appendCharacter('7')">7</button>
+    <button onclick="appendCharacter('8')">8</button>
+    <button onclick="appendCharacter('9')">9</button>
+    <button onclick="appendCharacter('-')">-</button>
+    <button onclick="appendCharacter('4')">4</button>
+    <button onclick="appendCharacter('5')">5</button>
+    <button onclick="appendCharacter('6')">6</button>
+    <button onclick="appendCharacter('+')">+</button>
+    <button onclick="appendCharacter('1')">1</button>
+    <button onclick="appendCharacter('2')">2</button>
+    <button onclick="appendCharacter('3')">3</button>
+    <button onclick="calculateResult()" style="grid-row: span 2;">=</button>
+    <button onclick="appendCharacter('0')" style="grid-column: span 2;">0</button>
+    <button onclick="appendCharacter('.')">.</button>
+</div>
+
+<script src="calc.js"></script>
+
+</body>
+</html>
